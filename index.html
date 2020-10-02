@@ -110,6 +110,11 @@ pre {
 	color: #ff6961;
 }
 
+.guess {
+	display: none;
+	color: #000000;
+}
+
 #no-message.message {
 	display: inline;
 }
@@ -264,7 +269,7 @@ img.bg {
       <span id="in-list" class="message">Found word</span>
     </div>
     <div class="messages">
-       <span id="guess-word" class="message"></span>
+       <span id="guess-word" class="guess">&nbsp;</span>
     </div>
 
     <div class="score">
@@ -339,7 +344,8 @@ img.bg {
 	document.getElementById("too-short").style.display = "none";
 	document.getElementById("not-in-list").style.display = "none";
 	document.getElementById("in-list").style.display = "none";
-	document.getElementById("guess-word").style.display = "none";
+	document.getElementById("guess-word").style.display = "inline";
+	document.getElementById("guess-word").innerHTML = "&nbsp";
 	document.getElementById("comb" + combno).style.height = "80px";
 	document.getElementById("comb" + combno).style.width = "80px";
 	document.getElementById("comb" + combno).style.left = parseInt(document.getElementById("comb" + combno).style.left) + 10 + "px";
@@ -607,7 +613,7 @@ img.bg {
 	document.getElementById("too-short").style.display = "none";
 	document.getElementById("not-in-list").style.display = "none";
 	document.getElementById("in-list").style.display = "none";
-	document.getElementById("guess-word").style.display = "none";
+	document.getElementById("guess-word").style.display = "inline";
 
 	if (replaying === 0) {
 	  guess = document.getElementById("guess").value.toLowerCase();
@@ -681,8 +687,8 @@ img.bg {
 	    document.getElementById("too-short").style.display = "none";
 	    document.getElementById("not-in-list").style.display = "none";
 	    document.getElementById("in-list").style.display = "none";
-	    document.getElementById("guess-word").style.display = "none";
-
+	    document.getElementById("guess-word").style.display = "inline";
+	    document.getElementById("guess-word").innerHTML = "&nbsp";
 	    replaying = 0;
 
 	    return;
@@ -696,7 +702,8 @@ img.bg {
 	document.getElementById("too-short").style.display = "none";
 	document.getElementById("not-in-list").style.display = "none";
 	document.getElementById("in-list").style.display = "none";
-	document.getElementById("guess-word").style.display = "none";
+	document.getElementById("guess-word").style.display = "inline";
+	document.getElementById("guess-word").innerHTML = "&nbsp";
 
 	replaying = 0;
       }
@@ -730,7 +737,7 @@ img.bg {
 	document.getElementById("rank-update").innerHTML = rank;
 	document.getElementById("yesterday-or-random").innerHTML = "Yesterday's answers";
 	document.getElementById("random-answers").style.display = "none";
-	document.getElementById("update-random").innerHTML = "";
+	document.getElementById("update-random").innerHTML = "&nbsp";
 	document.getElementById("no-message").style.display = "inline";
 	document.getElementById("pangram").style.display = "none";
 	document.getElementById("already-found").style.display = "none";
@@ -738,7 +745,8 @@ img.bg {
 	document.getElementById("too-short").style.display = "none";
 	document.getElementById("not-in-list").style.display = "none";
 	document.getElementById("in-list").style.display = "none";
-	document.getElementById("guess-word").style.display = "none";
+	document.getElementById("guess-word").style.display = "inline";
+	document.getElementById("guess-word").innerHTML = "&nbsp";
 	document.getElementById("play1").style.display = "none";
 	document.getElementById("play2").style.display = "none";
 	document.getElementById("play3").style.display = "none";
@@ -868,7 +876,7 @@ img.bg {
 	document.getElementById("answers-update").innerHTML = foundlist.join("<br />");
 	document.getElementById("rank-update").innerHTML = rank;
 	document.getElementById("yesterday-or-random").innerHTML = "Answers";
-	document.getElementById("update-random").innerHTML = "";
+	document.getElementById("update-random").innerHTML = "&nbsp";
 	document.getElementById("no-message").style.display = "inline";
 	document.getElementById("pangram").style.display = "none";
 	document.getElementById("already-found").style.display = "none";
@@ -876,7 +884,8 @@ img.bg {
 	document.getElementById("too-short").style.display = "none";
 	document.getElementById("not-in-list").style.display = "none";
 	document.getElementById("in-list").style.display = "none";
-	document.getElementById("guess-word").style.display = "none";
+	document.getElementById("guess-word").style.display = "inline";
+	document.getElementById("guess-word").innerHTML = "&nbsp";
 	document.getElementById("play1").style.display = "none";
 	document.getElementById("play2").style.display = "none";
 	document.getElementById("play3").style.display = "none";
