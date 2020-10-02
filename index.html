@@ -561,7 +561,6 @@ img.bg {
 	  document.getElementById("no-message").style.display = "none";
 	  document.getElementById("pangram").style.display = "inline";
 	  document.getElementById("in-list").style.display = "none";
-	  document.getElementById("guess-word").style.display = "inline";
 
 	  return;
 	}
@@ -576,13 +575,11 @@ img.bg {
 	  if (guess == foundlist[i]) {
 	    document.getElementById("no-message").style.display = "none";
 	    document.getElementById("already-found").style.display = "inline";
-	    document.getElementById("guess-word").style.display = "inline";
 	    return 1;
 	  }
 	}
 
 	document.getElementById("in-list").style.display = "inline";
-	document.getElementById("guess-word").style.display = "inline";
 
 	foundlist.push(guess);
 
@@ -613,7 +610,6 @@ img.bg {
 	document.getElementById("too-short").style.display = "none";
 	document.getElementById("not-in-list").style.display = "none";
 	document.getElementById("in-list").style.display = "none";
-	document.getElementById("guess-word").style.display = "inline";
 
 	if (replaying === 0) {
 	  guess = document.getElementById("guess").value.toLowerCase();
@@ -650,7 +646,6 @@ img.bg {
 	}
 	document.getElementById("no-message").style.display = "none";
 	document.getElementById("not-in-list").style.display = "inline";
-	document.getElementById("guess-word").style.display = "inline";
 
 	return 1;
       }
@@ -687,7 +682,6 @@ img.bg {
 	    document.getElementById("too-short").style.display = "none";
 	    document.getElementById("not-in-list").style.display = "none";
 	    document.getElementById("in-list").style.display = "none";
-	    document.getElementById("guess-word").style.display = "inline";
 	    document.getElementById("guess-word").innerHTML = "&nbsp";
 	    replaying = 0;
 
@@ -702,7 +696,6 @@ img.bg {
 	document.getElementById("too-short").style.display = "none";
 	document.getElementById("not-in-list").style.display = "none";
 	document.getElementById("in-list").style.display = "none";
-	document.getElementById("guess-word").style.display = "inline";
 	document.getElementById("guess-word").innerHTML = "&nbsp";
 
 	replaying = 0;
