@@ -294,7 +294,7 @@ img.bg {
 
     <div class="restart">
       <div class="restart-daily">
-	<button onclick="daily()">Restart daily game</button>
+	<button onclick="daily(0)">Restart daily game</button>
       </div>
       <div class="restart-random">
 	<button onclick="random()">New random game</button>
@@ -680,10 +680,18 @@ img.bg {
 	replaying = 0;
       }
 
-      function daily() {
+      function daily(replay = 1) {
 	var i;
 
 	daily_play = 1;
+
+	if (replay == 0) {
+	  if (confirm("Are you sure you want to restart the game?")) {
+	    localStorage.clear();
+	  } else {
+	    return;
+	  }
+	}
 
 	for (i = 0; i < found; i++) {
 	  foundlist.pop();
